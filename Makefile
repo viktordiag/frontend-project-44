@@ -1,6 +1,8 @@
 install: # установить зависимости 
 	npm ci
-braib-games: # запустить игру
+brain-games: # запустить игру
 	node bin/brain-games.js
+publish: 
+	npm publish --dry-run
 
 
