@@ -16,6 +16,6 @@ Let's try again ${name}!`);
   break;
  };
 console.log('Correct!');
-if (i === 3) console.log(`Congratulation, ${name}!`); 
+if (i === 3) console.log(`Congratulations, ${name}!`); 
 };
 
