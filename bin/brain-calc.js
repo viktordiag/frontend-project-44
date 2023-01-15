@@ -1,3 +1,3 @@
-#!/usr/bin/env node #выполнить файл как программу node
+#!/usr/bin/env node 
 import {gameCalc} from '../src/games/calc.js';
 gameCalc();
