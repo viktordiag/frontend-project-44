@@ -12,7 +12,7 @@ console.log(`Question: ${randomNumber}`);
 let userAnswer = readlineSync.question('Your answer:');
 if (correctAnswer !== userAnswer){
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
-Let's try again ${name}!`);
+Let's try again, ${name}!`);
   break;
  };
 console.log('Correct!');
