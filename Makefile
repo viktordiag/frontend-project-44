@@ -8,4 +8,5 @@ lint:
 	npx eslint
 brain-calc:
 	node bin/brain-calc.js
-
+brain-gcd:
+	node bin/brain-gcd.js
