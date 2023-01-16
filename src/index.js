@@ -13,7 +13,7 @@
 
   export const mainLogic = (question, correctAnswer, i) => {
     console.log(`Question: ${question}`);
-    let userAnswer = readlineSync.question('Your answer:');
+    let userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer != userAnswer){
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return uncorrect;
