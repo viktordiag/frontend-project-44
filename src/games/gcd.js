@@ -1,7 +1,7 @@
  import _ from 'lodash';
  import {greeting} from '../index.js';
  import {mainLogic} from '../index.js';
- import {gcd} from 'mathjs';
+ //import {gcd} from 'mathjs';
  export const gameGcd = () => {
    const theTask = 'Find the greatest common divisor of given numbers.';
    greeting(theTask);
