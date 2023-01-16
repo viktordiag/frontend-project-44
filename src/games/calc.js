@@ -2,7 +2,7 @@ import _ from 'lodash';
 import {greeting} from '../index.js';
 import {mainLogic} from '../index.js';
 export const gameCalc = () => {
-const theTask = 'What is the result of the expression?';
+const theTask = 'Wha is the result of the expression?';
 greeting(theTask);
 
 for (let i = 1; i <= 3; i += 1) {
