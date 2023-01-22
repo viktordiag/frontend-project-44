@@ -1,34 +1,36 @@
- import _ from 'lodash';
- import {greeting} from '../index.js';
- import {mainLogic} from '../index.js';
- //import {gcd} from 'mathjs';
- export const gameGcd = () => {
-   const theTask = 'Find the greatest common divisor of given numbers.';
-   greeting(theTask);
+import _ from 'lodash';
+import { greeting, mainLogic } from '../index.js';
 
-   const gcd = (numberOne, numberTwo) => {
-     if(numberOne === numberTwo) {
-       return numberOne;
-       }
-     while(numberOne != numberTwo) {
-       if(numberOne < numberTwo) {
-	 numberTwo -= numberOne;
-       } else {
-	       numberOne -= numberTwo
-         }
-     }
-       return numberOne;
-   };
-       
+export const gameGcd = () => {
+  const theTask = 'Find the greatest common divisor of given numbers.';
+  greeting(theTask);
 
-   for (let i = 1; i <= 3; i += 1) {
-     let numberOne = _.random(1,20);
-     let numberTwo = _.random(1,20);
-     let question  = `${numberOne} ${numberTwo}`;
-     let correctAnswer = gcd(numberOne, numberTwo);
-     let uncorrect =  mainLogic(question, correctAnswer, i);
-     if (uncorrect === 1) {
-       break;
-     };
-   };
+  const gcd = (numberOne, numberTwo) => {
+    let number1 = numberOne;
+    let number2 = numberTwo;
+    if (number1 === number2) {
+      return number1;
+    }
+    while (number1 !== number2) {
+      if (number1 < number2) {
+        number2 -= number1;
+      } else {
+        number1 -= number2;
+      }
+    }
+    return number1;
+  };
+
+  for (let i = 1; i <= 3; i += 1) {
+    const numberOne = _.random(1, 20);
+    const numberTwo = _.random(1, 20);
+    const question = `${numberOne} ${numberTwo}`;
+    const correctAnswer = gcd(numberOne, numberTwo);
+    const uncorrect = mainLogic(question, correctAnswer, i);
+    if (uncorrect === 1) {
+      break;
+    }
+  }
 };
+
+export default gameGcd;
