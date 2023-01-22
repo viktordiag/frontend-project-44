@@ -25,7 +25,7 @@ export const gameGcd = () => {
     const numberOne = _.random(1, 20);
     const numberTwo = _.random(1, 20);
     const question = `${numberOne} ${numberTwo}`;
-    const correctAnswer = gcd(numberOne, numberTwo);
+    const correctAnswer = String(gcd(numberOne, numberTwo));
     const uncorrect = mainLogic(question, correctAnswer, i);
     if (uncorrect === 1) {
       break;
