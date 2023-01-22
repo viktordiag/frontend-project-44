@@ -1,23 +1,23 @@
 import _ from 'lodash';
 import { greeting, mainLogic } from '../index.js';
 
+const calculat = (num1, num2, operat) => {
+  let result = 0;
+  if (operat === '-') {
+    result = (num1 - num2);
+  }
+  if (operat === '+') {
+    result = (num1 + num2);
+  }
+  if (operat === '*') {
+    result = (num1 * num2);
+  }
+  return result;
+};
+
 const gameCalc = () => {
   const theTask = 'What is the result of the expression?';
   greeting(theTask);
-
-  const calculat = (num1, num2, operat) => {
-    let result = 0;
-    if (operat === '-') {
-      result = (num1 - num2);
-    }
-    if (operat === '+') {
-      result = (num1 + num2);
-    }
-    if (operat === '*') {
-      result = (num1 * num2);
-    }
-    return result;
-  };
 
   for (let i = 1; i <= 3; i += 1) {
     const numberOne = _.random(1, 20);
